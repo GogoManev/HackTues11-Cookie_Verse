@@ -23,7 +23,7 @@ def login(request):
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('dms')
+        return redirect('index')
     
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -42,7 +42,7 @@ def signup(request):
         try:
             user = User.objects.create_user(username=username, email=email, password=password)
             login_func(request, user)
-            return redirect('dms')
+            return redirect('index')
         except Exception as e:
             return render(request, 'signup.html', {'error': str(e)})
 
