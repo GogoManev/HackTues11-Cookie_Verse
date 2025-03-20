@@ -12,6 +12,9 @@ def articles(request):
 def exercises(request):
     return render(request, 'exercises.html')
 
+def debloat(request):
+    return render(request, 'debloat.html')
+
 @login_required(login_url='/login/')
 def newpost(request):
     if request.method == 'POST':

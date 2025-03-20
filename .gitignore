@@ -13,6 +13,7 @@ backend/CookieTracker/__pycache__/models.cpython-38.pyc
 backend/CookieTracker/__pycache__/views.cpython-38.pyc
 backend/CookieTracker/migrations/__pycache__/__init__.cpython-38.pyc
 backend/CookieTracker/view/__pycache__/account.cpython-38.pyc
+backend/CookieTracker/view/__pycache__/other.cpython-38.pyc
 backend/backend/__pycache__/__init__.cpython-311.pyc
 backend/backend/__pycache__/settings.cpython-311.pyc
 backend/backend/__pycache__/urls.cpython-311.pyc
