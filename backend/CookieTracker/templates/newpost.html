@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <title>
+        <link rel="stylesheet", href="{% static 'styles/newpost.css' %}">
+    </title>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1>New Post</h1>
+            <div class="input-box">
+                <input type="text" placeholder="How to..." name="post_title" required>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="body" name="post_body" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="error">
+                {% if error %}
+                <p>{{ error }}</p>
+                {% endif %}
+            </div>
+
+            <input type="submit" value="Post" class="btn">
+        </form>
+    </body>
+</html>
