@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+  <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Articles</h1>
+    <p>Your go-to resource for fitness, health, and nutrition.</p>
+  </header>
+
+  <!-- Top 3 Articles Section -->
+  <section class="top-articles">
+    <h2>Top Articles</h2>
+    <div class="article-list">
+      <div class="article-item">
+        <h3><a href="{% url 'debloat' %}">Debloating: Quick & Easy</a></h3>
+        <p>Summary of the Debloating: Quick & Easy. Learn more about this topic.</p>
+      </div>
+      <div class="article-item">
+        <h3><a href="article2.html">Top Article 2</a></h3>
+        <p>Summary of the top article 2. Dive deeper into this subject.</p>
+      </div>
+      <div class="article-item">
+        <h3><a href="article3.html">Top Article 3</a></h3>
+        <p>Summary of the top article 3. Explore this insightful read.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Categories</h2>
+    <div class="category-list">
+      <div class="category-item">
+        <h3><a href="exercises.html">Exercises</a></h3>
+        <p>Discover the best workout routines and fitness tips.</p>
+      </div>
+      <div class="category-item">
+        <h3><a href="diet.html">Diet</a></h3>
+        <p>Learn about nutrition, meal plans, and healthy eating.</p>
+      </div>
+      <div class="category-item">
+        <h3><a href="health.html">Health</a></h3>
+        <p>Stay informed about general health and wellness.</p>
+      </div>
+      <!-- Add more categories as needed -->
+    </div>
+  </section>
+
+</body>
+</html>

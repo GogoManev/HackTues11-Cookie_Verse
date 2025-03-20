@@ -119,10 +119,14 @@ USE_TZ = True
 #STATIC_URL = 'static/'
 
 import os
+# settings.py
+
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'CookieTracker/static'),
 ]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
