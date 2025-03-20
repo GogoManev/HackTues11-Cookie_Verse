@@ -33,5 +33,5 @@ urlpatterns = [
 
     path('articles/', other.articles, name='articles'),
     path('exercises/', other.exercises, name='exercises'),
-    
+    path('debloat/', other.debloat, name='debloat'),
 ]

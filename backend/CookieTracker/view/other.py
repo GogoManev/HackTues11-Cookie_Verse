@@ -10,3 +10,6 @@ def articles(request):
 
 def exercises(request):
     return render(request, 'exercises.html')
+
+def debloat(request):
+    return render(request, 'debloat.html')
