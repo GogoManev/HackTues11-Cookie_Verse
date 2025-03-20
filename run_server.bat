@@ -1,0 +1,1 @@
+py .\backend\manage.py runserver
