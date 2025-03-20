@@ -5,13 +5,44 @@
 <head>
     <title>Diskype</title>
     <link rel="icon" href="{% static 'favicon.ico' %}">
-    <link rel="stylesheet", href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static '../static/styles/index.css' %}">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Diskype</h1>
-        <p>Connect with your friends instantly!</p>
-        
+    <header>
+        <div class="top-bar">
+         <img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo">
+
+            <div class="auth-buttons-left">
+                <button class="btn">Sign Up</button>
+                <button class="btn">Log In</button>
+            </div>
+            <div class="auth-buttons-right">
+                <button class="btn">Articles</button>
+                <button class="btn">Forums</button>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="square">
+            <img src="../static/Debloat.jpg" alt="Square 1">
+            <h3>Debloat: Quick & Easy</h3>
+        </div>
+        <div class="square">
+            <img src="images/square2.jpg" alt="Square 2">
+            <h3>Square 2</h3>
+        </div>
+        <div class="square">
+            <img src="images/square3.jpg" alt="Square 3">
+            <h3>Square 3</h3>
+        </div>
+    
+        <div class="rectangle-container">
+            <button class="rectangle">Button 1</button>
+            <button class="rectangle">Button 2</button>
+            <button class="rectangle">Button 3</button>
+            <button class="rectangle">Button 4</button>
+            <button class="rectangle">Button 5</button>
+        </div>
     </div>
 </body>
 </html>
