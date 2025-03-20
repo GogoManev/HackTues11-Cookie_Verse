@@ -19,3 +19,4 @@ backend/backend/__pycache__/urls.cpython-311.pyc
 backend/backend/__pycache__/wsgi.cpython-311.pyc
 backend/CookieTracker/view/__pycache__/account.cpython-311.pyc
 .gitignore
+backend/backend/__pycache__/urls.cpython-311.pyc
