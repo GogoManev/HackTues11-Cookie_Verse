@@ -33,5 +33,6 @@ urlpatterns = [
 
     path('articles/', other.articles, name='articles'),
     path('exercises/', other.exercises, name='exercises'),
+    path('newpost/', other.newpost, name='newpost'),
     
 ]
