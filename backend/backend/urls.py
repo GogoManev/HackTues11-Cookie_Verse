@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
 from CookieTracker.view import account
+from CookieTracker.view import other
 
 from CookieTracker import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,8 @@ urlpatterns = [
     path('login/', account.login, name='login'),
     path('signup/', account.signup, name='signup'),
     path('logout/', account.logout, name='logout'),
+
+    path('articles/', other.articles, name='articles'),
+    path('exercises/', other.exercises, name='exercises'),
+    
 ]
