@@ -26,3 +26,15 @@ def newpost(request):
         
         #return redirect('/channels/guilds/' + (str)(new_guild.id) + '/' + (str)(new_channel.id))
     return render(request, 'newpost.html')
+
+def viewpost(request, post_id):
+    try:
+        post = Post.objects.get(id=post_id)
+        context = {
+            'poster': post.poster,
+            'title': post.title,
+            'text': post.text,
+        }
+        return render(request, 'viewpost.html', context)
+    except Exception as e:
+        return render(request, 'viewpost.html', {'error': str(e)})
