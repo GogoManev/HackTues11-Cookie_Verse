@@ -33,10 +33,7 @@ urlpatterns = [
 
     path('articles/', other.articles, name='articles'),
     path('exercises/', other.exercises, name='exercises'),
-<<<<<<< HEAD
     path('debloat/', other.debloat, name='debloat'),
-=======
     path('newpost/', other.newpost, name='newpost'),
-    
->>>>>>> a273680d32cefeb76a914b790f5bf781c4d0762c
+    path('viewpost/<int:post_id>', other.viewpost, name='viewpost'),
 ]

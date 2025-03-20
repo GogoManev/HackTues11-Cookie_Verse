@@ -2,21 +2,6 @@
 
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-    <title>
-        <link rel="stylesheet", href="{% static 'styles/newpost.css' %}">
-    </title>
-    <body>
-        <form action="" method="post">
-            {% csrf_token %}
-            <h1>New Post</h1>
-            <div class="input-box">
-                <input type="text" placeholder="How to..." name="post_title" required>
-                <i class='bx bxs-envelope' ></i>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="body" name="post_body" required>
-=======
     <head>
         <title> New Post</title>
         <link rel="icon" href="{% static 'favicon.ico' %}">
@@ -33,7 +18,6 @@
             </div>
             <div class="input-box">
                 <input type="text" placeholder="Description..." name="post_body" required>
->>>>>>> a273680d32cefeb76a914b790f5bf781c4d0762c
                 <i class='bx bxs-user'></i>
             </div>
 
@@ -43,11 +27,8 @@
                 {% endif %}
             </div>
 
-<<<<<<< HEAD
-            <input type="submit" value="Post" class="btn">
-=======
+            <!--<input type="submit" value="Post" class="btn">-->
             <input class="btn" type="submit" value="Post" class="btn">
->>>>>>> a273680d32cefeb76a914b790f5bf781c4d0762c
         </form>
     </body>
 </html>

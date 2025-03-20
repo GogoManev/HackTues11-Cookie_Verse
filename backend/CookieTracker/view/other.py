@@ -12,10 +12,9 @@ def articles(request):
 def exercises(request):
     return render(request, 'exercises.html')
 
-<<<<<<< HEAD
 def debloat(request):
     return render(request, 'debloat.html')
-=======
+
 @login_required(login_url='/login/')
 def newpost(request):
     if request.method == 'POST':
@@ -30,4 +29,15 @@ def newpost(request):
         
         #return redirect('/channels/guilds/' + (str)(new_guild.id) + '/' + (str)(new_channel.id))
     return render(request, 'newpost.html')
->>>>>>> a273680d32cefeb76a914b790f5bf781c4d0762c
+
+def viewpost(request, post_id):
+    try:
+        post = Post.objects.get(id=post_id)
+        context = {
+            'poster': post.poster,
+            'title': post.title,
+            'text': post.text,
+        }
+        return render(request, 'viewpost.html', context)
+    except Exception as e:
+        return render(request, 'viewpost.html', {'error': str(e)})
