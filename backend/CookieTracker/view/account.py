@@ -7,7 +7,7 @@ User = get_user_model()
 
 def login(request):
     if request.user.is_authenticated:
-        return redirect('dms')
+        return redirect('index')
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -15,7 +15,7 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login_func(request, user)
-            return redirect('dms')
+            return redirect('index')
         else:
             return render(request, 'login.html', {'error': 'Invalid username or password'})
         
