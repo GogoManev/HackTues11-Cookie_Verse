@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from CookieTracker.view import account
+
 from CookieTracker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+
+    path('login/', account.login, name='login'),
+    path('signup/', account.signup, name='signup'),
+    path('logout/', account.logout, name='logout'),
 ]
