@@ -8,3 +8,5 @@ def index(request):
 
 def buildingMuscle(request):
     return render(request, 'building_muscle.html')
+def advanced_workout_routines(request):
+    return render(request, 'advanced_workout_routines.html')
