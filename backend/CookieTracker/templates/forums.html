@@ -11,9 +11,14 @@
         <div class="sidebar">
             <h2>Categories</h2>
             <ul>
-                <li><a href="./forum-categories/diet.html">Diet</a></li>
+                {% for f in forums %}
+                <!--<li><a href="./forum-categories/diet.html">Diet</a></li>
                 <li><a href="./forum-categories/exercise.html">Exercise</a></li>
-                <li><a href="./forum-categories/off-topic.html">Off-Topic</a></li>
+                <li><a href="./forum-categories/off-topic.html">Off-Topic</a></li>-->
+                <li><a href="/viewforum/{{ f.id }}">
+                    {{ f.name }}
+                </li></a>
+                {% endfor %}
             </ul>
         </div>
         <div class="forum-content">
