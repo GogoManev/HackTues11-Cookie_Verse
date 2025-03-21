@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 style="text-align: center;">Welcome to The Cookie Verse</h1>
+{% if user.is_authenticated %}
+<h1 style="text-align: center;">Welcome, {{ user.username }}, to The Cookie Verse</span>
+{% else %}
+<h1 style="text-align: center;">Welcome to The Cookie Verse</span>
+{% endif %}
+<h2 style="text-align: center; margin-bottom: 1px;">Top Articles</h2> 
     <div class="main-container">
         <div class="square">
             <a href="{% url 'debloat' %}">
@@ -20,15 +25,19 @@
                 <img src="https://i.ytimg.com/vi/geK9GNKGRpo/maxresdefault.jpg" alt="Square 3">
                 <h3>Building Muscle</h3>
             </a>
-        </div>
-    
-        <div class="rectangle-container">
-            <button class="rectangle">Button 1</button>
-            <button class="rectangle">Button 2</button>
-            <button class="rectangle">Button 3</button>
-            <button class="rectangle">Button 4</button>
-            <button class="rectangle">Button 5</button>
-        </div>
+        </div> 
+        <a href="{% url 'articles' %}" class="btn">Check all articles</a>
     </div>
-    
+    <h2 style="text-align: center;">Top Forums</h2>
+    <section class="top-articles">
+        <div class="article-list">
+            <div class="article-item">
+                <h3><a href="/forums/5"> Health</a></h3>
+            </div>
+            <div class="article-item">
+                <h3><a href="/forums/3"> Exercises</a></h3>
+            </div>
+        </div>
+      </section>
+
 {% endblock content %}
