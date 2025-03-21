@@ -52,7 +52,8 @@ def viewpost(request, post_id):
         return render(request, 'viewpost.html', context)
     except Exception as e:
         return render(request, 'viewpost.html', {'error': str(e)})
-    
+
+@login_required(login_url='/login/')
 def likepost(request, id):
     #MOVE POStoWEte DA BYDAT LIKNATI NQKOLKO PYTI
     post = Post.objects.get(id=id)
