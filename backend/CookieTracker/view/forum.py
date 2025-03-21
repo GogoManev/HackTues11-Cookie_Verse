@@ -11,7 +11,13 @@ def forum(request):
     return render(request, 'forums.html', context)
 
 def viewforum(request, id):
-    return render(request, 'forum/viewforum.html')
+    forum = Forum.objects.get(id=id)
+    posts = Post.objects.filter(forum=forum)
+    context = {
+        'forum': forum,
+        'posts': posts
+    }
+    return render(request, 'forum/viewforum.html', context)
 
 @login_required(login_url='/login/')
 def newpost(request):

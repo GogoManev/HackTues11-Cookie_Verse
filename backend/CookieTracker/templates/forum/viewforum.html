@@ -1,0 +1,14 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>{{ forum.name }}</h1>
+        {% for p in posts %}
+            <h1><a href="/viewpost/{{ p.id }}">{{ p.title }}</a></h1>
+        {% endfor %}
+    </body>
+</html>
