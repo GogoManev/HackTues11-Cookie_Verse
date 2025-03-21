@@ -1,33 +1,46 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercises</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+{% block content %}
   <header>
     <h1>Exercises</h1>
-    <p>Explore the best workout routines and fitness tips.</p>
+    <p>Explore the best workout routines, fitness tips, and exercise guides to achieve your fitness goals.</p>
   </header>
 
-  <section class="articles">
+  <!-- Articles List Section -->
+  <section class="articles-list">
     <h2>Articles on Exercises</h2>
     <div class="article-list">
+      <!-- Article 1: How to Build Muscle -->
       <div class="article-item">
-        <h3><a href="article4.html">Best Exercises for Beginners</a></h3>
-        <p>Learn the best exercises for beginners to kickstart your fitness journey.</p>
+        <h3><a href="{% url 'building_muscle' %}">How to Build Muscle</a></h3>
+        <p>Learn the science behind muscle growth and discover effective strategies to build muscle mass.</p>
       </div>
+
+      <!-- Article 2: Best Exercises for Beginners -->
       <div class="article-item">
-        <h3><a href="article5.html">Advanced Workout Routines</a></h3>
-        <p>Take your fitness to the next level with these advanced routines.</p>
+        <h3><a href="beginners-exercises.html">Best Exercises for Beginners</a></h3>
+        <p>Start your fitness journey with these beginner-friendly exercises and tips.</p>
       </div>
+
+      <!-- Article 3: Advanced Workout Routines -->
+      <div class="article-item">
+        <h3><a href="advanced-workouts.html">Advanced Workout Routines</a></h3>
+        <p>Take your fitness to the next level with these advanced workout routines.</p>
+      </div>
+
+      <!-- Article 4: Cardio for Fat Loss -->
+      <div class="article-item">
+        <h3><a href="cardio-fat-loss.html">Cardio for Fat Loss</a></h3>
+        <p>Discover the best cardio exercises to burn fat and improve cardiovascular health.</p>
+      </div>
+
+      <!-- Article 5: Strength Training Basics -->
+      <div class="article-item">
+        <h3><a href="strength-training.html">Strength Training Basics</a></h3>
+        <p>Learn the fundamentals of strength training and how to get started.</p>
+      </div>
+
       <!-- Add more articles as needed -->
     </div>
   </section>
-
-</body>
-</html>
+{% endblock content %}
