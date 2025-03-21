@@ -12,3 +12,6 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     poster = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='comments')
     text = models.CharField(max_length=300000)
+
+class Forum(models.Model):
+    name = models.CharField(max_length=2048)

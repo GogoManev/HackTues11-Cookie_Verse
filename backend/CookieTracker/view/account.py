@@ -19,7 +19,7 @@ def login(request):
         else:
             return render(request, 'login.html', {'error': 'Invalid username or password'})
         
-    return render(request, 'login.html')
+    return render(request, 'account/login.html')
 
 def signup(request):
     if request.user.is_authenticated:
@@ -46,7 +46,7 @@ def signup(request):
         except Exception as e:
             return render(request, 'signup.html', {'error': str(e)})
 
-    return render(request, 'signup.html')
+    return render(request, 'account/signup.html')
 
 @login_required(login_url='/login/')
 def logout(request):
