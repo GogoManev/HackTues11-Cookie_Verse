@@ -24,10 +24,10 @@ def newpost(request):
         post_body = request.POST.get('post_body')
         if not post_body:
             raise Http404('invaid post body')
-        new_guild = Post.objects.create(
+        new_post = Post.objects.create(
                                         title=title, poster=request.user, text=post_body)
-        
-        #return redirect('/channels/guilds/' + (str)(new_guild.id) + '/' + (str)(new_channel.id))
+        return redirect('/viewpost/' + (str)(new_post.id))
+
     return render(request, 'newpost.html')
 
 def viewpost(request, post_id):
