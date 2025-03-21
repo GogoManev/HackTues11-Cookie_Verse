@@ -17,3 +17,6 @@ def debloat(request):
 
 def guthealth(request):
     return render(request, 'guthealth.html')
+
+def building_muscle(request):
+    return render(request, 'building_muscle.html')
