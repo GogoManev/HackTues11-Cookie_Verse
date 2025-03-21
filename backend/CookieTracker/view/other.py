@@ -23,3 +23,6 @@ def building_muscle(request):
 
 def diet(request):
     return render(request, 'diet.html')
+
+def healthcat(request):
+    return render(request, 'health.html')
