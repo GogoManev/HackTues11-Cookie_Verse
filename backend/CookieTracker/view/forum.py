@@ -5,10 +5,23 @@ from ..models import Post, Comment, Forum
 from django.http import Http404
 
 def forum(request):
+
     context = {
         'forums': Forum.objects.all()
     }
-    return render(request, 'forums.html', context)
+    context2 = {
+        'forums': []
+    }
+    forums = Forum.objects.all()
+    i=0
+    for f in forums:
+        list = [f]
+        posts = Post.objects.filter(forum=f)
+        for p in posts:
+            list.append(p)
+        context2.get('forums').append(list)
+    print(context2)
+    return render(request, 'forums.html', context2)
 
 def viewforum(request, id):
     forum = Forum.objects.get(id=id)
