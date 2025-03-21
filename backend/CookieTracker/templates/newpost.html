@@ -12,6 +12,11 @@
         <input type="text" placeholder="Description..." name="post_body" required>
         <i class='bx bxs-user'></i>
     </div>
+    <select name="forum">
+        {% for f in forums %}
+        <option>{{ f.name }}</option>
+        {% endfor %}
+    </select>
 
     <div class="error">
         {% if error %}
