@@ -13,8 +13,8 @@
          <img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo">
 
             <div class="auth-buttons-left">
-                <button class="btn">Sign Up</button>
-                <button class="btn">Log In</button>
+                <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+                <a href="{% url 'login' %}" class="btn">Log In</a>
             </div>
             <div class="auth-buttons-right">
                 <button class="btn">Articles</button>
