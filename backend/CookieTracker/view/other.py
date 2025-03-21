@@ -21,5 +21,11 @@ def guthealth(request):
 def building_muscle(request):
     return render(request, 'building_muscle.html')
 
+def beginners_exercises(request):
+    return render(request, 'beginners_exercises.html')
+
 def diet(request):
     return render(request, 'diet.html')
+
+def healthcat(request):
+    return render(request, 'health.html')
