@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: #ddd;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+}
+
+.navbar {
+    position: sticky;
+    background-color: #0a0a0a; /* Background color */
+    display: flex;
+    top: 0%;
+    width: 100%;
+    z-index: 100;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center; /* Vertically center the logo and buttons */
+    justify-content: space-between; /* Space between logo and buttons */
+    width: 100%; /* Full width */
+    flex-wrap: nowrap; /* Prevent wrapping; elements must stay in one line */
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+/* Logo Styling */
+.logo {
+    width: 80px;  /* Set logo size */
+    height: auto; /* Keep aspect ratio */
+    display: block;
+    margin-right: 20px; /* Space between logo and buttons */
+}
+
+/* Authentication Buttons (Left) */
+.auth-buttons-left {
+    display: flex; /* Display buttons next to each other */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Authentication Buttons (Right) */
+.auth-buttons-right {
+    display: flex; /* Display buttons next to each other */
+    gap: 10px; /* Space between buttons */
+    margin-left: auto; /* Push the buttons to the far right */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #262626; /* Background color for buttons */
+    color: #00bfff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the buttons */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn:hover {
+    background-color: #7C9399; /* Darker color on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #cccccc;
+    position: sticky;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+        justify-content: flex-start; /* Align to top */
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    /* Adjust buttons to fit better on smaller screens */
+    .auth-buttons-left, .auth-buttons-right {
+        width: 100%;
+        gap: 5px;
+        margin-top: 10px;
+        justify-content: flex-start; /* Align buttons to the left */
+    }
+
+    /* Reduce button size on smaller screens */
+    .btn {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 16px; /* Smaller padding */
+    }
+
+    /* Adjust logo size on small screens */
+    .logo {
+        width: 60px; /* Smaller logo */
+        margin-right: 10px; /* Reduced space around the logo */
+    }
+}
