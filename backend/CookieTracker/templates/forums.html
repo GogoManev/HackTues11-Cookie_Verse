@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <section class="top-articles">
+    <a href="{% url 'newpost' %}" class="btn">New post</a>
     <h2>Categories</h2>
     <div class="article-list">
     {% for f in forums %}
       <div class="article-item">
         <h3>
             <a href="/forums/{{ f.id }}">
-                {{ f.name }} 
+                {{ f.name }}
             </a>
         </h3> 
         <p>Lorem ipsum!</p>
@@ -16,27 +16,5 @@
       {% endfor %}
     </div>
   </section>
-        <div class="forum-content">
-            <h1>Forums</h1>
-            
-            <div class="thread">
-                <div class="thread-title">Best Back Exercises</div>
-                <div class="thread-meta">Posted by Admin | 10 Replies</div>
-            </div>
-            
-            <div class="thread">
-                <div class="thread-title">Best Bicep Routines?</div>
-                <div class="thread-meta">Posted by User123 | 5 Replies</div>    
-            </div>
-            
-            <div class="thread">
-                <div class="thread-title">How to Bench More?</div>
-                <div class="thread-meta">Posted by StyleGuru | 8 Replies</div>
-            </div>
-            
-            <div class="new-thread">
-                <a href="{% url 'newpost' %}" class="btn">New post</a>
-            </div>
-        </div>
     </div>
 {% endblock content %}

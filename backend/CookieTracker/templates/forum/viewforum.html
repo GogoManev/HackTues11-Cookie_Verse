@@ -1,14 +1,19 @@
-{% load static %}
-
-<!Doctype html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>{{ forum.name }}</h1>
-        {% for p in posts %}
-            <h1><a href="/viewpost/{{ p.id }}">{{ p.title }}</a></h1>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<section class="top-articles">
+    <a href="{% url 'newpost' %}" class="btn">New post</a>
+    <h2>Posts from {{ forum.name }}</h2>
+    <div class="article-list">
+    {% for p in posts %}
+      <div class="article-item">
+        <h3>
+            <a href="/viewpost/{{ p.id }}">
+                {{ p.title }}
+            </a>
+        </h3> 
+        <p>Lorem ipsum!</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock content %}
