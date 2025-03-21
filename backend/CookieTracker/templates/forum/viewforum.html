@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="top-articles">
+    <a href="{% url 'forum' %}" class="btn"><- Back</a>
     <a href="{% url 'newpost' %}" class="btn">New post</a>
     <h2>Posts from {{ forum.name }}</h2>
     <div class="article-list">
@@ -11,7 +12,7 @@
                 {{ p.title }}
             </a>
         </h3> 
-        <p>Lorem ipsum!</p>
+        <p> ❤️ {{ p.likes }}</p>
       </div>
       {% endfor %}
     </div>

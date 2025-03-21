@@ -261,6 +261,10 @@ a:hover {
   text-decoration: none;
 }
 
+.post-title .btn{
+  background-color:#333;
+}
+
 .post-text{
   transition: 0.5s;
   margin-left: 20px;
@@ -279,6 +283,7 @@ a:hover {
 .post-text button{
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 5%;
   border: 1px solid #333;
   border-radius: 10px;
   background-color: #333;
@@ -288,6 +293,7 @@ a:hover {
 }
 
 .post-text button a{
+  font-size: 20px;
   text-decoration: none;
   color: red;
 }
