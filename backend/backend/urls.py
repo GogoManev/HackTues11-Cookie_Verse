@@ -41,6 +41,9 @@ urlpatterns = [
     path('building_muscle/', other.building_muscle, name='building_muscle'),
     path('beginners_exercises/', other.beginners_exercises, name='beginners_exercises'),
 
+    path('diet/', other.diet, name='diet'), 
+    path('healthcat/', other.healthcat, name='healthcat'),
+
     path('forum/', forum.forum, name='forum'),
     path('forums/<int:id>', forum.viewforum, name='viewforum'),
     path('newpost/', forum.newpost, name='newpost'),
