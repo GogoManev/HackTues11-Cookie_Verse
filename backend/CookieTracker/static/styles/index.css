@@ -5,6 +5,7 @@
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     margin-top: 100px;
+    background-color: #1a1a1a;
 }
 .username {
     color: white; /* Ensure it's visible */

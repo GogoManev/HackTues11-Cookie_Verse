@@ -1,14 +1,5 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Build Muscle</title>
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <header>
         <h1>How to Build Muscle: A Complete Guide</h1>
         <p>Learn the key strategies to build muscle effectively through training, nutrition, and recovery.</p>
@@ -70,9 +61,4 @@
             </ul>
         </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Your Website Name. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+{% endblock content %}
