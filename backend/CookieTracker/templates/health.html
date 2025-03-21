@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <header>
+    <h1>Health</h1>
+    <p>Explore articles on improving your overall health, wellness, and lifestyle for a better quality of life.</p>
+  </header>
+
+  <!-- Articles List Section -->
+  <section class="articles-list">
+    <h2>Articles on Health</h2>
+    <div class="article-list">
+      <!-- Article 1: How to Reset Your Gut Health -->
+      <div class="article-item">
+        <h3><a href="{% url 'guthealth' %}">How to Reset Your Gut Health</a></h3>
+        <p>Learn how to improve your gut health for better digestion, immunity, and overall well-being.</p>
+      </div>
+
+      <!-- Article 2: Benefits of Intermittent Fasting -->
+      <div class="article-item">
+        <h3><a href="intermittent-fasting.html">Benefits of Intermittent Fasting</a></h3>
+        <p>Discover the health benefits of intermittent fasting and how to get started.</p>
+      </div>
+
+      <!-- Article 3: Importance of Sleep -->
+      <div class="article-item">
+        <h3><a href="importance-of-sleep.html">The Importance of Sleep</a></h3>
+        <p>Understand why sleep is crucial for your health and how to improve your sleep quality.</p>
+      </div>
+
+      <!-- Article 4: Managing Stress -->
+      <div class="article-item">
+        <h3><a href="managing-stress.html">Managing Stress</a></h3>
+        <p>Explore effective strategies to manage stress and improve your mental health.</p>
+      </div>
+
+      <!-- Article 5: Boosting Your Immune System -->
+      <div class="article-item">
+        <h3><a href="immune-system.html">Boosting Your Immune System</a></h3>
+        <p>Learn how to strengthen your immune system naturally through diet and lifestyle changes.</p>
+      </div>
+
+      <!-- Add more articles as needed -->
+    </div>
+  </section>
+{% endblock content %}
