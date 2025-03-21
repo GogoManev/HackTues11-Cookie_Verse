@@ -9,6 +9,7 @@ body {
 
 .navbar {
     position: sticky;
+    position: -webkit-sticky;
     background-color: #0a0a0a; /* Background color */
     display: flex;
     top: 0%;
@@ -59,7 +60,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #7C9399; /* Darker color on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 191, 255, 0.2);
 }
 
 footer {

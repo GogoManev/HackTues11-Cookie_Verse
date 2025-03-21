@@ -17,3 +17,4 @@ def debloat(request):
 
 def guthealth(request):
     return render(request, 'guthealth.html')
+

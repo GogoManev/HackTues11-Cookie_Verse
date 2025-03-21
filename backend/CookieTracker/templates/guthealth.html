@@ -1,14 +1,6 @@
-{% load static %}    
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Reset Your Gut Health</title>
-  <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
   <header>
     <h1>How to Reset Your Gut Health</h1>
     <p>A comprehensive guide to improving your gut health and achieving better digestion, energy, and overall well-being.</p>
@@ -107,9 +99,4 @@
       <p>Resetting your gut health is a powerful way to improve your overall well-being. By eliminating harmful foods, incorporating gut-healing foods, taking probiotics, and reducing stress, you can restore balance to your gut microbiome and enjoy better digestion, energy, and health. Consistency is key—stick to these strategies, and you’ll see results over time.</p>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Cookie Verse. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+{% endblock content %}

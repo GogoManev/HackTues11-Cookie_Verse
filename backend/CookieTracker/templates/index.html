@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1 style="text-align: center;">Welcome to The Cookie Verse</h1>
     <div class="main-container">
         <div class="square">
             <a href="{% url 'debloat' %}">
@@ -9,8 +10,10 @@
             </a>
         </div>
         <div class="square">
-            <img src="images/square2.jpg" alt="Square 2">
-            <h3>Square 2</h3>
+            <a href="{% url 'guthealth' %}">
+                <img src="https://www.rushmemorial.com/wp-content/uploads/2023/06/GUT-HEALTH-BLOG-scaled.jpg" alt="Square 2">
+                <h3>Gut Health and It's Importance</h3>
+            </a>
         </div>
         <div class="square">
             <img src="images/square3.jpg" alt="Square 3">
