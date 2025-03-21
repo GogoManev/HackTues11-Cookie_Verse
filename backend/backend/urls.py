@@ -39,9 +39,11 @@ urlpatterns = [
     path('debloat/', other.debloat, name='debloat'),
     path('guthealth/', other.guthealth, name='guthealth'),
     path('building_muscle/', other.building_muscle, name='building_muscle'),
+    path('diet/', other.diet, name='diet'),
 
     path('forum/', forum.forum, name='forum'),
     path('forums/<int:id>', forum.viewforum, name='viewforum'),
     path('newpost/', forum.newpost, name='newpost'),
     path('viewpost/<int:post_id>', forum.viewpost, name='viewpost'),
+    
 ]
