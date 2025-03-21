@@ -3,9 +3,10 @@
 
     </head>
     <body>
-        <h1>{{ poster }}</h1> <!--poster-->
-        <h1>{{ title }}</h1> <!--title-->
-        <h1>{{ text }}</h1> <!--text-->
+        <h1>{{ post.poster }}</h1> <!--poster-->
+        <h1>{{ post.title }}</h1> <!--title-->
+        <h1>{{ post.text }}</h1> <!--text-->
+        <button><a href="/likepost/{{ post.id }}">♥ {{ post.likes }}</a></button>
         <div>
             {% for c in comments%}
             <div class="comment">

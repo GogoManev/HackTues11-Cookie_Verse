@@ -42,4 +42,5 @@ urlpatterns = [
     path('forums/<int:id>', forum.viewforum, name='viewforum'),
     path('newpost/', forum.newpost, name='newpost'),
     path('viewpost/<int:post_id>', forum.viewpost, name='viewpost'),
+    path('likepost/<int:id>', forum.likepost, name='likepost'),
 ]

@@ -46,12 +46,16 @@ def viewpost(request, post_id):
     try:
         post = Post.objects.get(id=post_id)
         context = {
-            'poster': post.poster,
-            'title': post.title,
-            'text': post.text,
+            'post': post,
             'comments': Comment.objects.filter(post_id = post.id),
         }
-        print(Comment.objects.filter(post_id = post.id)) 
         return render(request, 'viewpost.html', context)
     except Exception as e:
         return render(request, 'viewpost.html', {'error': str(e)})
+    
+def likepost(request, id):
+    #MOVE POStoWEte DA BYDAT LIKNATI NQKOLKO PYTI
+    post = Post.objects.get(id=id)
+    post.likes = post.likes + 1
+    post.save()
+    return redirect('/viewpost/' + (str)(id))
