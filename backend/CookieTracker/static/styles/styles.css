@@ -30,6 +30,47 @@ h2 {
   margin-bottom: 20px;
 }
 
+.auth-container{
+  text-align: center;
+  flex: 1 1 calc(33.333% - 40px);
+  container: 20px;
+  padding: 20px;
+  border: 1px solid #333; /* Dark border */
+  border-radius: 10px;
+  background-color: #262626; /* Slightly lighter than section background */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-container input{
+  background-color:#333;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  margin-top: 10px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 20%;
+  box-shadow: 2px 2px 2px black;
+  padding-left: 10px;
+}
+
+
+.auth-container .btn{
+  text-align: center;
+  width: 80px;
+}
+
+.sign-btn{
+  text-align: center;
+}
+
+.sign-btn .btn{
+  width: 90px;
+}
+
 .article-list, .category-list {
   display: flex;
   flex-wrap: wrap;
@@ -146,26 +187,169 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.form > h1 {
+.form h1 {
   margin: 0 0 20px;
   padding: 0;
   font-size: 24px;
   color: #007BFF;
 }
 
-.form > label {
+.form label {
   display: block;
   margin: 0 0 10px;
 }
 
-.form > input[type="text"],
+.form input[type="text"],
 
-.form > textarea {
-  width: 100%;
+.form textarea {
+  background-color:#333;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  padding-left: 10px;
+}
+
+.forums-select select{
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  margin-top: 20px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 20%;
+  box-shadow: 2px 2px 2px black;
+  padding-left: 10px;
+}
+
+.text-desc{
+  padding-bottom: 20%;
+}
+
+.post-title{
+  transition: 0.5s;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  background-color:#262626;
+  padding-left: 10px;
+  color: #007BFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.post-title h1{
+  margin-bottom: 1px;
+}
+
+.post-title a{
+  text-decoration: none;
+}
+
+.post-text{
+  transition: 0.5s;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  background-color:#262626;
+  padding-left: 10px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.post-text button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #333;
+  color: red;
   padding: 10px;
-  margin: 0 0 20px;
-  border: 1px solid #666;
-  border-radius: 5px;
-  background: #444;
-  color: #ddd;
+  transition: 0.5s;
+}
+
+.post-text button a{
+  text-decoration: none;
+  color: red;
+}
+
+.add-comment input{
+  background-color:#333;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+  margin-top: 10px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.add-comment .btn{
+  text-align: center;
+  padding-bottom: 7.5px;
+  width: 200px;
+}
+
+.comments{
+  transition: 0.5s;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  background-color:#262626;
+  padding-left: 10px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.comment{
+  transition: 0.5s;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  box-shadow: 2px 2px 2px black;
+  background-color:#333;
+  padding-left: 10px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.comments a{
+  text-decoration: none;
+}
+
+.comments p{
+  margin-top: 1px;
+  padding-bottom: 10px;
 }

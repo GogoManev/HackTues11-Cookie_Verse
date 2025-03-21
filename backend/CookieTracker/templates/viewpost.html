@@ -1,37 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="post-title">
+    <h1>{{ post.title }}</h1> <!--title-->
+    <a>Posted by: {{ post.poster }}</a> <!--poster-->
+</div>
 
-{% load static %}
+<div class="post-text">
+    <p>{{ post.text }}</p> <!--text-->
+    <button><a href="/likepost/{{ post.id }}">♥ {{ post.likes }}</a></button>
 
-    </head>
-    <body>
-        <h1>{{ post.poster }}</h1> <!--poster-->
-        <h1>{{ post.title }}</h1> <!--title-->
-        <h1>{{ post.text }}</h1> <!--text-->
-        <button><a href="/likepost/{{ post.id }}">♥ {{ post.likes }}</a></button>
-        <div>
-            {% for c in comments%}
-            <div class="comment">
-                <h1>{{ c.poster }}</h1> <!--poster-->
-                <h1>{{ c.text }}</h1> <!--text-->
+    <div class="add-comment">
+        <h2>Add comment</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" placeholder="Comment..." name="comment" required>
+                <i class='bx bxs-user'></i>
             </div>
-            {% endfor %}
-        </div>
-        <div>
-            <h1>Add comment</h1>
-            <form action="" method="post">
-                {% csrf_token %}
-                <div class="input-box">
-                    <input type="text" placeholder="Comment..." name="comment" required>
-                    <i class='bx bxs-user'></i>
-                </div>
+    
+            <div class="error">
+                {% if error %}
+                <p>{{ error }}</p>
+                {% endif %}
+            </div>
+    
+            <input type="submit" value="Post comment" class="btn">
+        </form>
+    </div>
+</div>
 
-                <div class="error">
-                    {% if error %}
-                    <p>{{ error }}</p>
-                    {% endif %}
-                </div>
+<div class="comments">
+    <h2>Comments</h2>
+    {% for c in comments%}
+    <div class="comment">
+        <a>{{ c.poster }}</a> <!--poster-->
+        <p>{{ c.text }}</p> <!--text-->
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
 
-                <input type="submit" value="Post comment" class="btn">
-            </form>
-        </div>
-    </body>
-</html>

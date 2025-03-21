@@ -4,19 +4,21 @@
 <form class="form" action="" method="post">
     {% csrf_token %}
     <h1>Write a new post</h1>
+    <div class="forums-select">
+        <select name="forum">
+            {% for f in forums %}
+            <option>{{ f.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
     <div class="input-box">
-        <input type="text" placeholder="Title" name="post_title" required>
+        <input type="text" placeholder="Title..." name="post_title" required>
         <i class='bx bxs-envelope'></i>
     </div>
     <div class="input-box">
-        <input type="text" placeholder="Description..." name="post_body" required>
+        <input class="text-desc" type="text" placeholder="Text..." name="post_body" required>
         <i class='bx bxs-user'></i>
     </div>
-    <select name="forum">
-        {% for f in forums %}
-        <option>{{ f.name }}</option>
-        {% endfor %}
-    </select>
 
     <div class="error">
         {% if error %}
