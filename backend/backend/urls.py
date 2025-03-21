@@ -19,8 +19,10 @@ from django.urls import path
 
 from CookieTracker.view import account
 from CookieTracker.view import other
+from CookieTracker.view import forum
 
 from CookieTracker import views
+
 
 
 urlpatterns = [
@@ -34,6 +36,9 @@ urlpatterns = [
     path('articles/', other.articles, name='articles'),
     path('exercises/', other.exercises, name='exercises'),
     path('debloat/', other.debloat, name='debloat'),
+    path('guthealth/', other.guthealth, name='guthealth'),
+
+    path('forum/', forum.forum, name='forum'),
     path('newpost/', other.newpost, name='newpost'),
     path('viewpost/<int:post_id>', other.viewpost, name='viewpost'),
 ]
