@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from ..models import Post, Comment, Forum
 from django.http import Http404
 
-def forum(request):
+'''def forum(request):
 
     context = {
         'forums': Forum.objects.all()
@@ -21,7 +21,23 @@ def forum(request):
             list.append(p)
         context2.get('forums').append(list)
     print(context2)
-    return render(request, 'forums.html', context2)
+    return render(request, 'forums.html', context2)'''
+
+def forum(request):
+    forums = Forum.objects.all()
+    
+    context = {
+        'forums': []
+    }
+
+    for f in forums:
+        forum_data = {
+            'forum': f,
+            'posts': Post.objects.filter(forum=f)
+        }
+        context['forums'].append(forum_data)
+    print(context)
+    return render(request, 'forums.html', context)
 
 def viewforum(request, id):
     forum = Forum.objects.get(id=id)

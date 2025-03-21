@@ -4,24 +4,24 @@
 <section class="top-articles">
     <h2>Categories</h2>
     <div class="article-list">
-    {% for f in forums %}
-      <div class="article-item">
-        <h3>
-            <a href="/forums/{{ f.id }}">
-                {{ <f class="Forum"></f>name }} 
-            </a>
-        </h3>
-        {% for p in posts%} 
-            <p>{{ p.name }}</p>
-        {% endfor %}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-        <div class="forum-content">
-            <div class="new-thread">
-                <a href="{% url 'newpost' %}" class="btn">New post</a>
-            </div>
+        {% for forum_data in forums %}
+        <div class="article-item">
+            <h3>
+                <a href="/forums/{{ forum_data.forum.id }}">
+                    {{ forum_data.forum.name }}
+                </a>
+            </h3>
+            {% for p in forum_data.posts %}
+                <p>{{ p.title }}</p>
+            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</section>
+<div class="forum-content">
+    <div class="new-thread">
+        <a href="{% url 'newpost' %}" class="btn">New post</a>
+    </div>
+</div>
+</div>
 {% endblock content %}
