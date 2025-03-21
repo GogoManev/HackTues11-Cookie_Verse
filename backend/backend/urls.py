@@ -33,10 +33,12 @@ urlpatterns = [
     path('signup/', account.signup, name='signup'),
     path('logout/', account.logout, name='logout'),
 
+
     path('articles/', other.articles, name='articles'),
     path('exercises/', other.exercises, name='exercises'),
     path('debloat/', other.debloat, name='debloat'),
     path('guthealth/', other.guthealth, name='guthealth'),
+    path('building_muscle', other.building_muscle, name="building_muscle"),
 
     path('forum/', forum.forum, name='forum'),
     path('newpost/', other.newpost, name='newpost'),

@@ -15,6 +15,9 @@ def exercises(request):
 def debloat(request):
     return render(request, 'debloat.html')
 
+def building_muscle(request):
+    return render(request, 'building_muscle.html')
+
 @login_required(login_url='/login/')
 def newpost(request):
     if request.method == 'POST':
