@@ -9,5 +9,13 @@
         <h1>{{ poster }}</h1> <!--poster-->
         <h1>{{ title }}</h1> <!--title-->
         <h1>{{ text }}</h1> <!--text-->
+        <div>
+            {% for c in comments%}
+            <div class="comment">
+                <h1>{{ c.poster }}</h1> <!--poster-->
+                <h1>{{ c.text }}</h1> <!--text-->
+            </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
