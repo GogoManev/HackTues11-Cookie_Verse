@@ -33,6 +33,14 @@ body {
     display: block;
     margin-right: 20px; /* Space between logo and buttons */
 }
+.logo-button {
+    display: inline-block; /* Ensures it behaves like a button */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-button:hover {
+    transform: scale(1.1) rotate(5deg); /* Slight zoom and rotate effect */
+}
 
 /* Authentication Buttons (Left) */
 .auth-buttons-left {

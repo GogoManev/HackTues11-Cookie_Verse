@@ -11,6 +11,7 @@ class Post(models.Model):
     title = models.CharField(max_length=128)
     text = models.CharField(max_length=3000000)
     forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
+    likes = models.IntegerField(default=0)
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)

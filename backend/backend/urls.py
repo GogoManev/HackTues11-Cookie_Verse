@@ -45,5 +45,9 @@ urlpatterns = [
     path('forums/<int:id>', forum.viewforum, name='viewforum'),
     path('newpost/', forum.newpost, name='newpost'),
     path('viewpost/<int:post_id>', forum.viewpost, name='viewpost'),
+<<<<<<< HEAD
     
+=======
+    path('likepost/<int:id>', forum.likepost, name='likepost'),
+>>>>>>> 52291fccbacd21519aa8500c0dd88f4029ecb66d
 ]

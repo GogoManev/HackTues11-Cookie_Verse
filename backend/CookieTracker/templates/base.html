@@ -13,21 +13,21 @@
 <body>
     <div class="navbar">
         <div class="top-bar">
-            <a href="/"><img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo"> </a>
+            <a href="/" class="logo-button"><img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo"> </a>
    
             <div class="auth-buttons-left">
-               {% if user.is_authenticated %}
-                   <span class="username">Welcome, {{ user.username }}</span>
-                   <a href="{% url 'logout' %}" class="btn">Log Out</a>
-               {% else %}
-                   <a href="{% url 'signup' %}" class="btn">Sign Up</a>
-                   <a href="{% url 'login' %}" class="btn">Log In</a>
-               {% endif %}
+                <button class="btn"><a href="{% url 'articles' %}">Articles</a></button>
+                <button class="btn"><a href="{% url 'forum' %}">Forums</a></button>
            </div>
            
                <div class="auth-buttons-right">
-                   <button class="btn"><a href="{% url 'articles' %}">Articles</a></button>
-                   <button class="btn"><a href="{% url 'forum' %}">Forums</a></button>
+                {% if user.is_authenticated %}
+                   <span class="username">Welcome, {{ user.username }}</span>
+                   <a href="{% url 'logout' %}" class="btn">Log Out</a>
+                {% else %}
+                   <a href="{% url 'login' %}" class="btn">Log In</a>
+                {% endif %}
+                   
                </div>
            </div>
     </div>
