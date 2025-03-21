@@ -1,20 +1,5 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles</title>
-  <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-</head>
-<body>
-  <header>
-    <h1>Articles</h1>
-    <p>Your go-to resource for fitness, health, and nutrition.</p>
-  </header>
-
-  <!-- Top 3 Articles Section -->
+{% extends 'base.html' %}
+{% block content %}
   <section class="top-articles">
     <h2>Top Articles</h2>
     <div class="article-list">
@@ -27,7 +12,7 @@
         <p>Summary of Gut Health and It's Importance. Dive deeper into this subject.</p>
       </div>
       <div class="article-item">
-        <h3><a href="article3.html">Top Article 3</a></h3>
+        <h3><a href="{% url 'building_muscle'%}">Top Article 3</a></h3>
         <p>Summary of the top article 3. Explore this insightful read.</p>
       </div>
     </div>
@@ -52,6 +37,5 @@
       <!-- Add more categories as needed -->
     </div>
   </section>
-
-</body>
-</html>
+  
+{% endblock content %}

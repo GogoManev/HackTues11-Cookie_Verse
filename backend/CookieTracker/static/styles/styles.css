@@ -1,13 +1,3 @@
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #0a0a0a; /* Dark background */
-  color: #ffffff; /* White text */
-  line-height: 1.6;
-}
-
 header {
   background-color: #1a1a1a; /* Slightly lighter black */
   color: #00bfff; /* Bright blue for accents */
@@ -79,17 +69,6 @@ a:hover {
   text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #1a1a1a; /* Dark footer */
-  color: #cccccc; /* Light gray text */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-
 
 /* Article Page Specific Styles */
 .article-content {
@@ -158,12 +137,35 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 191, 255, 0.2);
 }
 
-/* Footer Adjustment for Article Page */
-footer {
-  text-align: center;
-  padding: 15px;
+.form {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
   background-color: #1a1a1a;
-  color: #cccccc;
-  position: relative;
-  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form > h1 {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 24px;
+  color: #007BFF;
+}
+
+.form > label {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.form > input[type="text"],
+
+.form > textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 20px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background: #444;
+  color: #ddd;
 }

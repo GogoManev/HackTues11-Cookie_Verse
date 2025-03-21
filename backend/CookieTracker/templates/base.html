@@ -1,0 +1,41 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/viewpost.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-bar">
+            <img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo">
+   
+            <div class="auth-buttons-left">
+               {% if user.is_authenticated %}
+                   <span class="username">Welcome, {{ user.username }}</span>
+                   <a href="{% url 'logout' %}" class="btn">Log Out</a>
+               {% else %}
+                   <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+                   <a href="{% url 'login' %}" class="btn">Log In</a>
+               {% endif %}
+           </div>
+           
+               <div class="auth-buttons-right">
+                   <button class="btn">Articles</button>
+                   <button class="btn">Forums</button>
+               </div>
+           </div>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <p>&copy; 2025 Cookie Verse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

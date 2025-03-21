@@ -1,0 +1,20 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Dark background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+.title {
+    background-color: #1a1a1a; /* Slightly lighter black */
+    color: #00bfff; /* Bright blue for accents */
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+.title h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
