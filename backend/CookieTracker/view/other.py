@@ -48,3 +48,6 @@ def viewpost(request, post_id):
         return render(request, 'viewpost.html', context)
     except Exception as e:
         return render(request, 'viewpost.html', {'error': str(e)})
+
+def guthealth(request):
+    return render(request, 'guthealth.html')
