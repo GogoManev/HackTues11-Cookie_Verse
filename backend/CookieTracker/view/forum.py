@@ -11,7 +11,13 @@ def forum(request):
     return render(request, 'forums.html', context)
 
 def viewforum(request, id):
-    return render(request, 'forum/viewforum.html')
+    forum = Forum.objects.get(id=id)
+    posts = Post.objects.filter(forum=forum)
+    context = {
+        'forum': forum,
+        'posts': posts
+    }
+    return render(request, 'forum/viewforum.html', context)
 
 @login_required(login_url='/login/')
 def newpost(request):
@@ -22,11 +28,14 @@ def newpost(request):
         post_body = request.POST.get('post_body')
         if not post_body:
             raise Http404('invaid post body')
+        forum = Forum.objects.get(name = request.POST.get('forum')) 
+        
         new_post = Post.objects.create(
-                                        title=title, poster=request.user, text=post_body)
+                                        title=title, poster=request.user, text=post_body, forum=forum)
         return redirect('/viewpost/' + (str)(new_post.id))
 
-    return render(request, 'newpost.html')
+    forums = Forum.objects.all()
+    return render(request, 'newpost.html', { 'forums': forums })
 
 def viewpost(request, post_id):
     if request.method == 'POST':
