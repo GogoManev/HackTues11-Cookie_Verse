@@ -21,3 +21,5 @@ backend/backend/__pycache__/wsgi.cpython-311.pyc
 backend/CookieTracker/view/__pycache__/account.cpython-311.pyc
 .gitignore
 backend/backend/__pycache__/urls.cpython-311.pyc
+backend/CookieTracker/migrations/__pycache__/0002_alter_post_poster_comment.cpython-38.pyc
+backend/CookieTracker/view/__pycache__/forum.cpython-38.pyc
