@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="top-articles">
+    <h2 style="text-align: center;">Diet Articles</h2>
+    <div class="article-list">
+      <div class="article-item">
+        <h3><a href="{% url 'debloat' %}">Why is water intake so important</a></h3>
+        <p>###########################</p>
+      </div>
+      <div class="article-item">
+        <h3><a href="{% url 'guthealth' %}">How much should you eat in a day</a></h3>
+        <p>###########################</p>
+      </div>
+      <div class="article-item">
+        <h3><a href="{% url 'building_muscle' %}">Carnival diet</a></h3>
+        <p>###########################</p>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock content %}
