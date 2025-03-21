@@ -31,6 +31,11 @@ def newpost(request):
     return render(request, 'newpost.html')
 
 def viewpost(request, post_id):
+    if request.method == 'POST':
+        comment_text = request.POST.get('comment')
+        comment = Comment.objects.create(
+                                        text=comment_text,poster=request.user,post=Post.objects.get(id=post_id))
+
     try:
         post = Post.objects.get(id=post_id)
         context = {
