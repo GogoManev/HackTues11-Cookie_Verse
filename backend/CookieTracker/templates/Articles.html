@@ -1,20 +1,5 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles</title>
-  <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-</head>
-<body>
-  <header>
-    <h1>Articles</h1>
-    <p>Your go-to resource for fitness, health, and nutrition.</p>
-  </header>
-
-  <!-- Top 3 Articles Section -->
+{% extends 'base.html' %}
+{% block content %}
   <section class="top-articles">
     <h2>Top Articles</h2>
     <div class="article-list">
@@ -52,6 +37,5 @@
       <!-- Add more categories as needed -->
     </div>
   </section>
-
-</body>
-</html>
+  
+{% endblock content %}

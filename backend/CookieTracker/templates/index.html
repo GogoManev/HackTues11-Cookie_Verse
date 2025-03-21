@@ -1,31 +1,12 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Diskype</title>
-    <link rel="icon" href="{% static 'favicon.ico' %}">
-    <link rel="stylesheet" href="{% static '../static/styles/index.css' %}">
-</head>
-<body>
-    <header>
-        <div class="top-bar">
-         <img src="{% static '../static/main_logo.png' %}" alt="Forum Logo" class="logo">
-
-            <div class="auth-buttons-left">
-                <a href="{% url 'signup' %}" class="btn">Sign Up</a>
-                <a href="{% url 'login' %}" class="btn">Log In</a>
-            </div>
-            <div class="auth-buttons-right">
-                <button class="btn">Articles</button>
-                <button class="btn">Forums</button>
-            </div>
-        </div>
-    </header>
+{% block content %}
     <div class="main-container">
         <div class="square">
-            <img src="../static/Debloat.jpg" alt="Square 1">
-            <h3>Debloat: Quick & Easy</h3>
+            <a href="{% url 'debloat' %}">
+                <img src="../static/Debloat.jpg" alt="Square 1">
+                <h3>Debloat: Quick & Easy</h3>
+            </a>
         </div>
         <div class="square">
             <img src="images/square2.jpg" alt="Square 2">
@@ -44,5 +25,5 @@
             <button class="rectangle">Button 5</button>
         </div>
     </div>
-</body>
-</html>
+    
+{% endblock content %}

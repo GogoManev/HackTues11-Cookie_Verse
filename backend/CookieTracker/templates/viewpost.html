@@ -1,13 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="post">
+    <h1 class="title">{{ title }}</h1>
+    <p class="user">Posted by: {{ poster }}</p>
+    <p class="text">{{ text }}</p>
+</div>
+{% endblock %}
+
 {% load static %}
-
-<!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>{{ poster }}</h1> <!--poster-->
-        <h1>{{ title }}</h1> <!--title-->
-        <h1>{{ text }}</h1> <!--text-->
-    </body>
-</html>

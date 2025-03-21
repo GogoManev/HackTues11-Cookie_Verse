@@ -1,14 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #1a1a1a;
-    color: #ddd;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-form {
+.form {
     width: 100%;
     max-width: 600px;
     background: #333;
@@ -17,20 +7,21 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-form h1 {
+.form > h1 {
     margin: 0 0 20px;
     padding: 0;
     font-size: 24px;
     color: #007BFF;
 }
 
-form label {
+.form > label {
     display: block;
     margin: 0 0 10px;
 }
 
-form input[type="text"],
-form textarea {
+.form > input[type="text"],
+
+.form > textarea {
     width: 100%;
     padding: 10px;
     margin: 0 0 20px;
@@ -39,20 +30,3 @@ form textarea {
     background: #444;
     color: #ddd;
 }
-
-.btn {
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    background: #4da6ff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    display: block;
-    font-size: 16px;
-}
-.btn:hover {
-    background: #1e4db7;
-}
-
